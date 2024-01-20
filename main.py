@@ -1,4 +1,5 @@
 import selenium
+import time
 from selenium import webdriver
 def get_driver():
   # Set options to make browsing easier
@@ -16,6 +17,7 @@ def get_driver():
 
 def main():
   driver=get_driver()
-  element = driver.find_element(by="xpath", value="/html/body/div[1]/div/h1[1]")
+  time.sleep(2)
+  element = driver.find_element(by="xpath", value="/html/body/div[1]/div/h1[2]")
   return element.text
 print(main())
